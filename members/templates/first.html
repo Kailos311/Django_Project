@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "maintemplate.html"%}
+{% block title %}
+    All members
+{% endblock%}
 
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
+{% block content %}
+    <h1>This is all members on your database!</h1>
+    {% for x in member_list %}
+        <p>{{x.firstname}} {{x.lastname}}</p>
+    {% endfor %}
 
-</body>
-</html>
+{% endblock%}
